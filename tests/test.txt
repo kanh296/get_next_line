@@ -1,0 +1,5 @@
+This code defines a function called get_next_line that reads text from a file descriptor fd and returns the next line in the file on each function call until the end of file is reached.
+
+The function starts by checking if the file descriptor is valid and if the buffer size is greater than zero. If either of these conditions is not met, the function returns NULL.
+
+It then calls the ft_read_to_left_str function, passing in the file descriptor fd and a static pointer left_str to a string containing any remaining text from the previous call to get_next_line. This function reads from the file descriptor until a newline character is encountered, or the end of file is reached. It stores any remaining text after the newline in left_str.
